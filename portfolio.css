@@ -1,0 +1,913 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600&family=Ubuntu:wght@300;400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600&family=Ubuntu:wght@300;400;500;700&display=swap');
+html{
+    scroll-behavior: smooth;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+/* nav-bar styling */
+
+.max-width{
+    max-width: 1300px;
+    margin: auto;
+    padding: 0px 80px;
+}
+.nav-bar{
+    position: fixed ;
+    /* background: crimson; */
+    width: 100%;
+    font-family: 'Ubuntu','sans-serif';
+    padding: 30px 0px;
+    transition: all .3s ease;
+    z-index: 999;
+}
+.nav-bar.sticky .menu li a:hover{
+    color: #fff;
+}
+.nav-bar.sticky{
+    padding: 15px 0px;
+    background: crimson;
+
+}
+.nav-bar.sticky .logo a span{
+    color: #fff;
+}
+.nav-bar .max-width{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.nav-bar .logo a{
+    font-size: 35px;
+    color: #fafafa;
+    font-weight: 600;
+    text-decoration: none;
+}
+.nav-bar .logo a span{
+    color: crimson;
+    transition: all .3s ease;
+}
+.nav-bar li{
+    list-style: none;
+    display: inline-block
+}
+.nav-bar .menu li a{
+    color: #fafafa;
+    font-weight: 500;
+    margin-left: 15px;
+    font-size: 20px;
+    text-decoration: none;
+    transition:color .3s ease;
+}
+.nav-bar .menu li a:hover{
+    color: crimson ;
+}
+
+/* menu-btn styling */
+
+.menu-btn{
+    color: #fff;
+    font-size: 25px;
+    cursor: pointer;
+    display: none;
+}
+.scroll-up-btn{
+    position: fixed;
+    height: 45px;
+    width: 42px;
+    background: crimson;
+    right: 30px;
+    bottom: 10px;
+    text-align: center;
+    border-radius: 6px;
+    line-height: 45px;
+    color: #fff;
+    z-index: 9999;
+    cursor: pointer;
+    font-size: 30px;
+    opacity:0;
+    pointer-events:none;
+    transition: all .3s ease;
+
+}
+
+.scroll-up-btn.show {
+    bottom: 40px;
+    opacity:1;
+    pointer-events:auto;
+}
+
+ 
+/* home section styling------------------ */
+
+.home{
+    background: url('picture/pic5.jpg') ;
+    display: flex;
+    /* background:url('picture/pexels-mateusz-dach-450035.jpg') no-repeat center; */
+    height:100vh ;
+    min-height: 500px;
+    background-size: cover;
+    color: #fff;
+     font-family: 'Ubuntu',
+     'sans-serif';
+}
+
+.home .max-width{
+    margin:auto 0 auto 40px;
+}
+.home .home-content .text1{
+    font-size: 25px;
+}
+.home .home-content .text2 {
+    font-size: 75px;
+    font-weight: 600;
+    margin-left: -3px;
+}
+.home .home-content .text3 {
+    font-size: 40px;
+    margin: 5px 0;
+}
+.home .home-content .text3 span{
+    color: crimson;
+    font-weight: 500;
+}
+.home .home-content .typing{
+    font-size: 40px;
+    font-weight: 700;
+}
+.home .home-content a{
+    font-size: 25px;
+    display: inline-block;
+    background: crimson;
+    color: #fff;
+    padding: 6px 25px;
+    font-weight: 500;
+    border-radius: 5px;
+    margin-top: 10px;
+    text-decoration: none;
+    border: 2px solid crimson;
+    transition: all .3s ease;
+}
+.home .home-content a:hover{
+    color: crimson;
+    background: none;
+}
+
+
+/* about section styling */
+
+section{
+    padding: 100px 0px;
+}
+
+.about, .services, .skills{
+    font-family: 'Poppins',sans-serif;
+
+}
+.about .title {
+    font-family: 'Ubuntu',sans-serif;
+    text-align: center;
+    font-size: 40px;
+    font-weight: 500;
+    margin-bottom: 60px;
+    padding-bottom: 20px;
+    position: relative;
+    
+}
+.about .title::before{
+    content: '';
+    position: absolute;
+    width: 170px;
+    height: 3px;
+    background: #111;
+    bottom: 0;
+    left: 50%;  
+    transform: translateX(-50%)
+
+}
+
+
+.about .title::after {
+    content: 'who i am';
+    position: absolute;
+    background: #111;
+    bottom: -9;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 20px;
+    color: crimson;
+    bottom: -10px;
+    background: #fff;
+    padding: 3 px;
+    
+}
+
+.about .about-content{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.about .about-content .typing2{
+    font-size: 30px;
+    font-weight: 600;
+}
+.about .about-content .left{
+    width: 45%;
+}
+
+.about .about-content .left img{
+    width: 400px;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 5px;
+    transition: all .3s ease; 
+
+}
+.about .about-content .left img:hover{
+     box-shadow: 0px 0px 20px;
+     transform: translateX(20px) rotate(7deg);
+}
+
+.about .about-content .right{
+    width: 55%;
+}
+.about .about-content .right .text{
+    font-size: 23px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.about .about-content .right .text span{
+    color: crimson;
+}
+
+.about .about-content .right p{
+    text-align: justify;
+}
+
+.about .about-content .right a{
+    font-size: 18px;
+    display: inline-block;
+    background: crimson;
+    color: #fff;
+    padding: 10px 25px;
+    font-weight: 500;
+    border-radius: 5px;
+    margin-top: 20px;
+    text-decoration: none;
+    border: 2px solid crimson;
+    transition: all .3s ease;
+}
+
+.about .about-content .right a:hover{
+    color: crimson;
+    background: none;
+}
+
+
+/* services section styling */
+
+.services{
+    color: #fff;
+    background: #111;
+}
+.services .title {
+    font-family: 'Ubuntu', sans-serif;
+    text-align: center;
+    font-size: 40px;
+    font-weight: 500;
+    margin-bottom: 60px;
+    padding-bottom: 20px;
+    position: relative;
+
+}
+
+.services .title::before {
+    content: '';
+    position: absolute;
+    width: 170px;
+    height: 3px;
+    background: #fff;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%)
+}
+
+.services .title::after {
+    content: 'what i provide';
+    position: absolute;
+    background: #111;
+    bottom: -10;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 20px;
+    color: crimson;
+    bottom: -6px;
+    
+
+}
+
+.services .serv-content{
+     
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    
+}
+
+.services .serv-content .cardd{
+    width: calc(33% - 20px);
+    background: #222;
+    text-align: center;
+    border-radius: 6px;
+    padding: 20px 25px ;
+     transition: all .3s ease;
+}
+.services .serv-content .cardd:hover{
+    background: crimson;
+}
+.services .serv-content .cardd .boxs{
+    transition: all .3s ease;
+}
+.services .serv-content .cardd .boxs:hover {
+    transform: scale(1.07);
+}
+.services .serv-content .cardd i{
+    font-size: 50px;
+    color: crimson;
+     transition: all .3s ease;
+}
+.services .serv-content .cardd:hover i{
+    color: #fff;
+    transform: scale(1.4);
+}
+.services .serv-content .cardd .text{
+    font-size: 25px;
+    font-weight: 500;
+    margin: 10px 0px 7px 0px;
+}
+
+
+/* skills section styling -------------------------- */
+                      
+.skills{
+    font-family: 'Poppins',sans-serif;
+}
+.skills .title {
+    font-family: 'Ubuntu', sans-serif;
+    text-align: center;
+    font-size: 40px;
+    font-weight: 500;
+    margin-bottom: 60px;
+    padding-bottom: 20px;
+    position: relative;
+
+}
+
+.skills .title::before {
+    content: '';
+    position: absolute;
+    width: 170px;
+    height: 3px;
+    background: #111;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%)
+}
+
+.skills .title::after {
+    content: 'what i know';
+    position: absolute;
+    background: #111;
+    bottom: -10;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 20px;
+    color: crimson;
+    bottom: -6px;
+    background: #fff;
+
+}
+.skills .skills-content .column {
+    width: calc(50% - 30px);
+}
+
+.skills .skills-content{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+}
+.skills .skills-content .left a{
+    text-decoration: none;
+    font-size: 16px;
+    display: inline-block;
+    background: crimson;
+    color: #fff;
+    padding: 8px 16px;
+    font-weight: 400;
+    border-radius: 5px;
+    margin-top: 10px;
+    text-decoration: none;
+    border: 2px solid crimson;
+    transition: all .3s ease;
+}
+.skills .skills-content .left a:hover{
+    color: crimson;
+    background:none;
+}
+.skills .skills-content .left p{
+    text-align: justify;
+}
+.skills .skills-content .left .text{
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 20;
+}
+.skills .skills-content .right .bars{
+    margin-bottom: 15px;
+}
+
+.skills .skills-content .right .info{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+.skills .skills-content .right .line{
+    height: 5px;
+    width: 100%;
+    background: lightgrey;
+    position: relative;
+}
+
+.skills .skills-content .right .line::before{
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 80%;
+    background: crimson;
+    top: 0;
+    left: 0;
+    
+}
+
+.skills .skills-content .right .html::before{
+    width: 90%;
+}
+
+.skills .skills-content .right .css::before {
+    width: 80%;
+}
+.skills .skills-content .right .bootstrap::before {
+    width: 75%;
+}
+.skills .skills-content .right .js::before {
+    width: 55%;
+}
+.skills .skills-content .right .jquery::before {
+    width: 75%;
+}
+
+
+/* teams section styling */
+
+.teams {
+    color: #fff;
+    background: #111;
+}
+
+.teams .title {
+    font-family: 'Ubuntu', sans-serif;
+    text-align: center;
+    font-size: 40px;
+    font-weight: 500;
+    margin-bottom: 60px;
+    padding-bottom: 20px;
+    position: relative;
+
+}
+
+.teams .title::before {
+    content: '';
+    position: absolute;
+    width: 170px;
+    height: 3px;
+    background: #fff;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%)
+}
+
+.teams .title::after {
+    content: 'what i provide';
+    position: absolute;
+    background: #111;
+    bottom: -10;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 20px;
+    color: crimson;
+    bottom: -6px;
+
+
+}
+
+.teams .carousel .card{
+    background: #222;
+    border-radius: 6px;
+    padding: 25px 32px;
+    transition: all .3s ease;
+}
+.teams .carousel .card:hover{
+    background: crimson;
+}
+.teams .carousel .card .box{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: all .3s ease;
+    text-align: center;
+}
+.teams .carousel .card:hover .box{
+    transform: scale(1.05);
+}
+.teams .carousel .card .text{
+    font-size: 25px;
+    font-weight: 500;
+    margin: 10px 0 7px 0;
+   
+}
+.teams .carousel .card img{
+    height: 150px;
+    width: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 5px solid crimson;
+    transition: all .3s ease;
+}
+.teams .carousel .card:hover img{
+    border-color: #fff;
+}
+
+.owl-dots{
+    text-align: center;
+    margin-top: 20px;
+}
+.owl-dot{
+    height: 13px;
+    width: 13px;
+    outline: none !important;
+    border-radius: 50%;
+    border: 2px solid crimson !important;
+    transform: all .3s ease;
+}
+.owl-dot.active,
+.owl-dot:hover{
+    background: crimson !important;
+}
+.owl-dot.active{
+    width: 35px;
+    border-radius: 14px;
+}
+
+/* contact section styling---- */
+
+.contact {
+    font-family: 'Poppins', sans-serif;
+}
+
+.contact .title {
+    font-family: 'Ubuntu', sans-serif;
+    text-align: center;
+    font-size: 40px;
+    font-weight: 500;
+    margin-bottom: 60px;
+    padding-bottom: 20px;
+    position: relative;
+
+}
+
+.contact .title::before {
+    content: '';
+    position: absolute;
+    width: 170px;
+    height: 3px;
+    background: #111;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%)
+}
+
+.contact .title::after {
+    content: 'get in touch';
+    position: absolute;
+    background: #111;
+    bottom: -10;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 20px;
+    color: crimson;
+    bottom: -6px;
+    background: #fff;
+
+}
+
+
+
+.contact{
+    font-family: 'Poppins',sans-serif;
+}
+.contact .contact-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+}
+
+.contact .contact-content .column{
+    width: calc(50% - 30px);
+}
+.contact .contact-content .left .text{
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+.contact .contact-content .left p{
+    text-align: justify;
+}
+.contact .contact-content .left .icons{
+    margin: 10px 0;
+}
+.contact .contact-content .row{
+    display: flex;
+    height: 65px;
+    align-items: center;
+
+}
+.contact .contact-content .row .info{
+    margin-left: 30px;
+}
+.contact .contact-content .row i{
+    font-size: 25px;
+    color: crimson ;
+}
+.contact .contact-content .row .head{
+    font-weight: 600;
+}
+.contact .contact-content .info .sub-title{
+    color: #333;
+}
+.contact .right form .fields{
+    display: flex;
+}
+
+.contact .right form .field,
+.contact .right form .fields .field{
+    width: 100%;
+    height: 45px;
+    margin-bottom: 15px;
+}
+.contact .right form .name{
+    margin-right: 10px;
+}
+.contact .right form .email {
+    margin-left: 10px;
+}
+.contact .right form .textarea {
+    height: 80px;
+    width: 100%;
+}
+
+.contact .right form .field input{
+    height: 100%;
+    width: 100%;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    outline: none;
+    padding: 0 15px;
+    font-size: 16px;
+    font-family: 'Poppins',sans-serif;
+
+  
+}
+.contact .right .text{
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+.contact .right form .textarea textarea {
+     height: 100%;
+     width: 100%;
+     border: 1px solid lightgray;
+     border-radius: 5px;
+     outline: none;
+     padding: 0 15px;
+     font-size: 16px;
+     font-family: 'Poppins',
+     sans-serif;
+    
+}
+.contact .right form .textarea textarea{
+    padding-top: 10px;
+    resize: none;
+}
+
+.contact .right form .button{
+    width: 170px;
+    height: 47px;
+}
+
+.contact .right form .button button {
+    width: 100%;
+    height: 100%;
+    border: 2px solid crimson;
+    background: crimson;
+    color: #fff;
+    border-radius: 5px;
+    font-size: 20px;
+    font-weight: 500;
+    transition: all .3s ease;
+    cursor: pointer;
+}
+.contact .right form .button button:hover{
+    color: crimson;
+    background: none;
+}
+
+
+/* footer section styling---- */
+
+footer{
+    font-family: 'Poppins',sans-serif;
+    background: #111;
+    padding: 20px 23px;
+    color: #fff;
+    /* text-align: center; */
+}
+footer span a{
+    text-decoration: none;
+    color: crimson;
+    font-family: 'Poppins',sans-serif;
+}
+
+footer i{
+    color: crimson;
+}
+
+
+
+
+
+/* Responsive media query start */
+
+@media (max-width: 1300px) {
+    .home .max-width {
+        margin-left: 0px;
+    }
+} 
+
+@media (max-width: 1104px){
+    .about .about-content .left img {
+        width: 350px;
+        height: 350px;
+     
+    }
+}
+
+@media (max-width: 947px){
+    .max-width {
+        padding: 0 50px;
+    }
+}
+
+@media (max-width: 947px){
+    
+    .menu-btn {
+       z-index: 999;
+        display: block;
+    }
+    .menu-btn i.active:before{
+        content:' \f00d';
+    }
+    .nav-bar .menu{
+        position: fixed;
+        height: 100vh;
+        background: #111;
+        width: 100%;
+        top: 0;
+        left: -100%;
+        text-align: center;
+        padding-top: 75px;
+        transition: all .3s ease;
+    }
+     .nav-bar .menu.active{
+        left: 0;
+     }
+    .nav-bar .menu li {
+        display: block;
+    }
+     .nav-bar .menu li a{
+         display: inline-block;
+         margin: 20px 0;
+         font-size: 25px;
+     }
+
+     .home .home-content .text2 {
+         font-size: 68px;
+         
+     }
+
+     .home .home-content .text3 {
+         font-size: 32px;
+     
+     }
+     .home .home-content a{
+         font-size: 20px;
+         padding-top: 8px 25px;
+     }
+     .max-width {
+         max-width: 800px;
+        
+     }
+     .about .about-content .column{
+        width: 100%;  
+     } 
+     .about .about-content .column .left{
+         display: flex;
+         justify-content: center; 
+         margin:0 auto 60px;
+       
+     }
+     .about .about-content .column .right {
+        flex: 100%;
+
+     }
+     .services .serv-content .cardd{
+         width: calc(50% - 10px);
+         margin-bottom: 20px;
+     }
+     .skills .skills-content .column,
+     .contact .contact-content .column {
+         width: 100%;
+         margin-bottom: 25px;
+     }
+}
+
+@media (max-width: 690px) {
+    .max-width {
+        padding: 0px 20px;
+    }
+    
+    .home .home-content .text2 {
+        font-size: 60px;
+
+    }
+
+    .home .home-content .text3 {
+        font-size: 30px;
+
+    }
+    .home .home-content a {
+        font-size: 17px;
+        
+    }
+    .services .serv-content .cardd
+     {
+        width:100%;
+        margin-bottom: 20px;
+       
+    } 
+    .skills .skills-content .column{
+        width:100%;
+    }
+}
+@media (max-width: 500px) {
+
+
+.home .home-content .text2 {
+    font-size: 50px;
+
+}
+
+.home .home-content .text3 {
+    font-size: 25px;
+
+}
+}
+
+
+
+
+
+
+
+
